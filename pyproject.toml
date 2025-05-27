@@ -1,6 +1,6 @@
 [project]
 name = "pyrit-sqlalchemy14"
-version = "0.9.1"
+version = "0.9.3"
 description = "SQLAlchemy 1.4 compatible version of PyRIT (Python Risk Identification Tool for LLMs)"
 authors = [
     { name = "Microsoft AI Red Team", email = "airedteam@microsoft.com" },
