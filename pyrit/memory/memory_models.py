@@ -18,8 +18,7 @@ from sqlalchemy import (
     Unicode,
 )
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy.types import TypeDecorator
 
 from pyrit.models import PromptDataType, PromptRequestPiece, Score, ScoreType, SeedPrompt
@@ -388,4 +387,4 @@ class SeedPromptEntry(Base):
 # Now set up the relationships that couldn't be defined earlier due to forward references
 
 # Add relationship between PromptMemoryEntry and ScoreEntry
-PromptMemoryEntry.scores = relationship("ScoreEntry", backref="prompt_memory_entry")
+PromptMemoryEntry.scores = relationship("ScoreEntry", back_populates="prompt_request_piece")

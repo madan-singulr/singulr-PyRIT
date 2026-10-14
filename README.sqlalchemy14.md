@@ -1,17 +1,17 @@
-# PyRIT - SQLAlchemy 1.4 Compatible Version
+# PyRIT - SQLAlchemy 2.x Compatible Version
 
-This is a modified version of [PyRIT (Python Risk Identification Tool for LLMs)](https://github.com/Azure/PyRIT) that has been patched to work with SQLAlchemy 1.4.47 instead of SQLAlchemy 2.0+.
+This project is a modified version of [PyRIT (Python Risk Identification Tool for LLMs)](https://github.com/Azure/PyRIT) updated to work with SQLAlchemy 2.x releases, including 2.0.x and newer.
 
 ## Overview
 
-PyRIT is a library used to assess the robustness of Large Language Models (LLMs). This fork maintains all the functionality of the original PyRIT but makes it compatible with environments that require SQLAlchemy 1.4.x.
+PyRIT is a library used to assess the robustness of Large Language Models (LLMs). This fork maintains the functionality of the original PyRIT while ensuring compatibility with modern SQLAlchemy 2.x environments.
 
-## Key Modifications
+## Key Updates
 
-- Modified database models to work with SQLAlchemy 1.4.47
-- Added custom UUID type implementation for SQLAlchemy 1.4
-- Replaced SQLAlchemy 2.0-specific features with 1.4-compatible alternatives
-- Added compatibility with pydantic-sqlalchemy 0.0.9
+- Updated ORM models to be compatible with SQLAlchemy 2.x
+- Replaced deprecated SQLAlchemy 1.4-style imports and relationship patterns
+- Updated model declaration patterns for SQLAlchemy 2.x
+- Kept compatibility with current Pydantic-based model usage
 
 ## Installation
 
@@ -28,8 +28,8 @@ poetry add pyrit-sqlalchemy14
 ## Requirements
 
 - Python 3.10 or higher
-- SQLAlchemy 1.4.47 (not compatible with SQLAlchemy 2.0+)
-- pydantic-sqlalchemy 0.0.9
+- SQLAlchemy 2.0.6 or newer
+- Pydantic 2.x
 
 ## Usage
 
@@ -42,4 +42,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 - Original PyRIT developed by Microsoft AI Red Team
-- This SQLAlchemy 1.4 compatible version is maintained independently
+- This SQLAlchemy 2.x compatible version is maintained independently
